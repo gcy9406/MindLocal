@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">NetRelay</string>
+    <string name="device_error">DEVICE ERROR</string>
+    <string name="control">CONTROL</string>
+    <string name="add_device">ADD DEVICE</string>
+    <string name="name_empty">NAME IS EMPTY</string>
+    <string name="ip_error">IP ERROR</string>
+    <string name="device_exist">DEVICE EXISTED</string>
+    <string name="relay">RELAY</string>
+    <string name="input">INPUT</string>
+    <string name="home">HOME</string>
+    <string name="set_input_info">INPUT INFO</string>
+    <string name="set_output_info">RELAY INFO</string>
+    <string name="select_mode">SELECT MODE</string>
+    <string name="set">CONFIG</string>
+    <string name="delete_device">DELETE DEVICE?</string>
+    <string name="cancel">CANCEL</string>
+    <string name="delete">DELETE</string>
+    <string name="device_info">DEVICE INFO</string>
+    <string name="device_ip">DEVICE IP</string>
+    <string name="input_device_ip">Input device ip</string>
+    <string name="device_name">DEVICE NAME</string>
+    <string name="input_device_name">Input device name</string>
+    <string name="device_head">DEVICE IMAGE</string>
+    <string name="current_ip">Current IP:</string>
+    <string name="input_name">INPUT NAME</string>
+    <string name="input_input_name">Input INPUT name</string>
+    <string name="input_head">INPUT IMAGE</string>
+    <string name="output_name">RELAY NAME</string>
+    <string name="input_output_name">Input RELAY name</string>
+    <string name="control_mode">CONTROL MODE</string>
+    <string name="output_head">RELAY IMAGE</string>
+    <string name="btn_delete">DELETE DEVICE</string>
+    <string name="btn_set_input_info">CONFIG INPUT INFO</string>
+    <string name="btn_set_output_info">CONFIG OUTPUT INFO</string>
+    <string name="btn_set_device_info">CONFIG DEVICE INFO</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="pulse">PULSE</string>
+    <string name="turn">TURN</string>
+    <string name="lock">LOCK</string>
+    <string name="btn_add">ADD</string>
+    <string-array name="mode">
+        <item>RELAY MODE</item>
+        <item>PULSE MODE</item>
+        <item>TURN MODE</item>
+        <item>LOCK MODE</item>
+    </string-array>
+</resources>

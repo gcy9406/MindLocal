@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">云豆V5</string>
+    <string name="device_error">设备异常</string>
+    <string name="control">控制</string>
+    <string name="add_device">添加设备</string>
+    <string name="name_empty">名称不能为空</string>
+    <string name="ip_error">设备IP设置错误</string>
+    <string name="device_exist">设备已经存在</string>
+    <string name="relay">开关</string>
+    <string name="input">输入</string>
+    <string name="home">首页</string>
+    <string name="set_input_info">设置输入信息</string>
+    <string name="set_output_info">设置输出信息</string>
+    <string name="select_mode">选择控制模式</string>
+    <string name="set">设置</string>
+    <string name="delete_device">您确定删除当前设备吗?</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="device_info">设备名称</string>
+    <string name="device_ip">设备IP</string>
+    <string name="input_device_ip">请输入设备IP地址</string>
+    <string name="device_name">设备名称</string>
+    <string name="input_device_name">请输入设备名称</string>
+    <string name="device_head">设备头像</string>
+    <string name="current_ip">当前IP:</string>
+    <string name="input_name">输入名称</string>
+    <string name="input_input_name">请输入输入名称</string>
+    <string name="input_head">输入头像</string>
+    <string name="output_name">通道名称</string>
+    <string name="input_output_name">请输入通道名称</string>
+    <string name="control_mode">控制模式</string>
+    <string name="output_head">通道头像</string>
+    <string name="btn_delete">删除设备</string>
+    <string name="btn_set_input_info">设置输入信息</string>
+    <string name="btn_set_output_info">设置输出信息</string>
+    <string name="btn_set_device_info">设置设备名称</string>
+    <string name="on">打开</string>
+    <string name="off">关闭</string>
+    <string name="pulse">点触</string>
+    <string name="turn">翻转</string>
+    <string name="lock">互锁</string>
+    <string name="btn_add">添加</string>
+    <string-array name="mode">
+        <item>开关模式</item>
+        <item>点触模式</item>
+        <item>翻转模式</item>
+        <item>互锁模式</item>
+    </string-array>
+</resources>
