@@ -18,6 +18,7 @@
     <string name="delete">删除</string>
     <string name="device_info">设备名称</string>
     <string name="device_ip">设备IP</string>
+    <string name="device_version">设备型号</string>
     <string name="input_device_ip">请输入设备IP地址</string>
     <string name="device_name">设备名称</string>
     <string name="input_device_name">请输入设备名称</string>

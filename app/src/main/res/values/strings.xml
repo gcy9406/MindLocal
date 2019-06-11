@@ -18,6 +18,7 @@
     <string name="delete">DELETE</string>
     <string name="device_info">DEVICE INFO</string>
     <string name="device_ip">DEVICE IP</string>
+    <string name="device_version">DEVICE VERSION</string>
     <string name="input_device_ip">Input device ip</string>
     <string name="device_name">DEVICE NAME</string>
     <string name="input_device_name">Input device name</string>

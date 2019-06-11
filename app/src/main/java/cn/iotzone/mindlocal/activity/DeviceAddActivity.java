@@ -1,5 +1,7 @@
 package cn.iotzone.mindlocal.activity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -44,6 +46,8 @@ public class DeviceAddActivity extends BaseActivity {
     Button mAdd;
     @BindView(R.id.add_image)
     CircleImageView mAddImage;
+    @BindView(R.id.add_version)
+    TextView addVersion;
     private String mHead;
 
     @Override
@@ -60,7 +64,7 @@ public class DeviceAddActivity extends BaseActivity {
         mToolLeft.setImageResource(R.mipmap.icon_back);
     }
 
-    @OnClick({R.id.tool_left, R.id.add_image, R.id.add})
+    @OnClick({R.id.tool_left, R.id.add_image, R.id.add,R.id.add_version})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tool_left:
@@ -74,38 +78,52 @@ public class DeviceAddActivity extends BaseActivity {
                         .setPreviewEnabled(false)
                         .start(this, PhotoPicker.REQUEST_CODE);
                 break;
+            case R.id.add_version:
+                final String [] item = new String [] {"V5","V16"};
+                new AlertDialog.Builder(this)
+                        .setItems(item, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                addVersion.setText(item[which]);
+                            }
+                        })
+                        .create()
+                        .show();
+                break;
             case R.id.add:
                 String name = mAddName.getText().toString();
                 String ip = mAddIp.getText().toString();
-                if (name.equals("")){
+                if (name.equals("")) {
                     Toast.makeText(this, getString(R.string.name_empty), Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if (ip.split("\\.").length != 4){
+                if (ip.split("\\.").length != 4) {
                     Toast.makeText(this, getString(R.string.ip_error), Toast.LENGTH_SHORT).show();
                     return;
                 }
                 List<DBDevice> devices = MainApplication.getDaoInstant().getDBDeviceDao().queryBuilder().where(DBDeviceDao.Properties.DeviceIp.eq(ip)).list();
-                if (devices != null && devices.size() > 0){
+                if (devices != null && devices.size() > 0) {
                     Toast.makeText(this, getString(R.string.device_exist), Toast.LENGTH_SHORT).show();
-                }else {
+                } else {
                     DBDevice device = new DBDevice();
                     device.setDeviceName(name);
                     device.setDeviceHead(mHead);
                     device.setDeviceIp(ip);
                     List<BeanOutput> beanOutputs = new ArrayList<>();
                     List<BeanIntput> beanInputs = new ArrayList<>();
-                    for (int i = 0; i < 8; i++) {
+                    String channel = addVersion.getText().toString().substring(1);
+
+                    for (int i = 0; i < Integer.parseInt(channel); i++) {
                         BeanOutput beanOutput = new BeanOutput();
                         BeanIntput beanInput = new BeanIntput();
-                        beanOutput.setName(getString(R.string.relay)+(i+1));
+                        beanOutput.setName(getString(R.string.relay) + (i + 1));
                         beanOutput.setMode(0);
                         beanOutput.setState(false);
                         beanOutput.setChannel(i);
                         beanOutputs.add(beanOutput);
 
-                        beanInput.setName(getString(R.string.input)+(i+1));
+                        beanInput.setName(getString(R.string.input) + (i + 1));
                         beanInput.setState(false);
                         beanInput.setChannel(i);
                         beanInputs.add(beanInput);

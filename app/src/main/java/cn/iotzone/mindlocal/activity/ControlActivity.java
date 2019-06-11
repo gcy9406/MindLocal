@@ -93,7 +93,7 @@ public class ControlActivity extends BaseActivity implements OutputAdapter.IClic
                         if (mqttMessage.getTopic().equals(mIp)){
                             String mesg = mqttMessage.getMesg();
                             BeanCmd beanCmd = MainApplication.getGson().fromJson(mesg,BeanCmd.class);
-                            for (int i = 0; i < 8; i++) {
+                            for (int i = 0; i < mOutputs.size(); i++) {
                                 BeanOutput beanOutput = mOutputs.get(i);
                                 BeanIntput beanIntput = mIntputs.get(i);
                                 if (beanCmd.getOutput().substring(i,i+1).equals("1")){
@@ -178,7 +178,7 @@ public class ControlActivity extends BaseActivity implements OutputAdapter.IClic
 
     public String generateCmd(int pos,int cmd){
         StringBuilder sb = new StringBuilder("setr=");
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 16; i++) {
             if (i == pos){
                 sb.append(cmd);
             }else {
