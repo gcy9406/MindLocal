@@ -81,6 +81,7 @@ public class MainActivity extends BaseActivity implements DeviceListAdapter.ICli
     @Override
     protected void initViews() {
         mToolTitle.setText(getString(R.string.home));
+        mToolTitle.setTextSize(18);
         Glide.with(this).load(R.mipmap.icon_add).into(mToolRight);
         mCurrentIp.setText(getIP());
 
@@ -127,7 +128,10 @@ public class MainActivity extends BaseActivity implements DeviceListAdapter.ICli
 
     @Override
     public void doClick(int paramInt, DBDevice paramBeanDevice) {
-        startActivity(new Intent(this, ControlActivity.class).putExtra("ip", paramBeanDevice.getDeviceIp()));
+        Bundle bundle = new Bundle();
+        bundle.putString("ip",paramBeanDevice.getDeviceIp());
+        bundle.putString("input",paramBeanDevice.getDeviceInput());
+        startActivity(new Intent(this, ControlActivity.class).putExtras(bundle));
     }
 
     @Override

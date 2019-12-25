@@ -56,6 +56,7 @@ public class ModifyInputActivity extends BaseActivity implements InputInfoAdapte
     protected void initViews() {
         mToolLeft.setImageResource(R.mipmap.icon_back);
         mToolTitle.setText(getString(R.string.set_input_info));
+        mToolTitle.setTextSize(18);
         mToolRight.setImageResource(R.mipmap.icon_finish);
         mInputList.setLayoutManager(new LinearLayoutManager(this));
         mInputInfoAdapter = new InputInfoAdapter();

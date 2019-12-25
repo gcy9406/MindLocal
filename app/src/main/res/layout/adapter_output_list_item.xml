@@ -59,7 +59,7 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="12sp"
                 android:layout_marginRight="5dp"
-                android:background="@color/colorRelayOn"
+                android:background="@drawable/selector_btn_on"
                 android:text="@string/on"/>
             <Button
                 android:id="@+id/relay_off"
@@ -68,7 +68,7 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="12sp"
                 android:layout_marginRight="5dp"
-                android:background="@color/colorRelayOff"
+                android:background="@drawable/selector_btn_off"
                 android:text="@string/off"/>
         </LinearLayout>
         <LinearLayout
@@ -84,7 +84,7 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="12sp"
                 android:layout_marginRight="5dp"
-                android:background="@color/colorRelayPulse"
+                android:background="@drawable/selector_btn_pulse"
                 android:text="@string/pulse"/>
         </LinearLayout>
         <LinearLayout
@@ -100,7 +100,7 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="12sp"
                 android:layout_marginRight="5dp"
-                android:background="@color/colorRelayTurn"
+                android:background="@drawable/selector_btn_turn"
                 android:text="@string/turn"/>
         </LinearLayout>
         <LinearLayout
@@ -116,7 +116,7 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="12sp"
                 android:layout_marginRight="5dp"
-                android:background="@color/colorRelayLock"
+                android:background="@drawable/selector_btn_lock"
                 android:text="@string/lock"/>
             <Button
                 android:id="@+id/relay_lock_off"
@@ -125,7 +125,7 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="12sp"
                 android:layout_marginRight="5dp"
-                android:background="@color/colorRelayOff"
+                android:background="@drawable/selector_btn_off"
                 android:text="@string/off"/>
         </LinearLayout>
     </LinearLayout>

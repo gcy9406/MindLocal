@@ -61,6 +61,7 @@ public class DeviceAddActivity extends BaseActivity {
     @Override
     protected void initViews() {
         mToolTitle.setText(getString(R.string.add_device));
+        mToolTitle.setTextSize(18);
         mToolLeft.setImageResource(R.mipmap.icon_back);
     }
 

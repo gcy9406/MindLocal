@@ -49,6 +49,7 @@ public class SetListActivity extends BaseActivity {
     protected void initViews() {
         mToolLeft.setImageResource(R.mipmap.icon_back);
         mToolTitle.setText(getString(R.string.set));
+        mToolTitle.setTextSize(18);
     }
 
     @OnClick({R.id.tool_left, R.id.set_name, R.id.set_output, R.id.set_input,R.id.set_del})

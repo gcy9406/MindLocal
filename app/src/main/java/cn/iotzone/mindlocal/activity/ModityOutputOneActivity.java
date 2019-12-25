@@ -55,6 +55,7 @@ public class ModityOutputOneActivity extends BaseActivity {
     protected void initViews() {
         mToolLeft.setImageResource(R.mipmap.icon_back);
         mToolTitle.setText(getString(R.string.set_output_info));
+        mToolTitle.setTextSize(18);
         mToolRight.setImageResource(R.mipmap.icon_finish);
         mName.setText(mBeanOutput.getName());
         mName.setSelection(mBeanOutput.getName().length());

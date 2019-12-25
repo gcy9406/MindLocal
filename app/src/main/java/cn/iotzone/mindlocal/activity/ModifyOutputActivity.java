@@ -56,6 +56,7 @@ public class ModifyOutputActivity extends BaseActivity implements OutputInfoAdap
         mToolLeft.setImageResource(R.mipmap.icon_back);
         mToolRight.setImageResource(R.mipmap.icon_finish);
         mToolTitle.setText(getString(R.string.set_output_info));
+        mToolTitle.setTextSize(18);
         mOutputInfoAdapter = new OutputInfoAdapter();
         mRelayList.setLayoutManager(new LinearLayoutManager(this));
         mRelayList.setAdapter(mOutputInfoAdapter);

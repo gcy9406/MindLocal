@@ -53,6 +53,7 @@ public class ModifyInputOneActivity extends BaseActivity {
     protected void initViews() {
         mToolLeft.setImageResource(R.mipmap.icon_back);
         mToolTitle.setText(getString(R.string.set_input_info));
+        mToolTitle.setTextSize(18);
         mToolRight.setImageResource(R.mipmap.icon_finish);
         mName.setText(mBeanInput.getName());
         mName.setSelection(mBeanInput.getName().length());

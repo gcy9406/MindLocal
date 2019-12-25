@@ -56,6 +56,7 @@ public class SetNameActivity extends BaseActivity {
         mToolLeft.setImageResource(R.mipmap.icon_back);
         mToolRight.setImageResource(R.mipmap.icon_finish);
         mToolTitle.setText(getString(R.string.device_info));
+        mToolTitle.setTextSize(18);
         if (mDevices != null && mDevices.size() > 0) {
             mDeviceName.setText(mDevices.get(0).getDeviceName());
             mDeviceName.setSelection(mDevices.get(0).getDeviceName().length());

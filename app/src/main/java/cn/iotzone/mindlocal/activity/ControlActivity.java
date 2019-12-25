@@ -19,6 +19,11 @@ import java.util.concurrent.TimeUnit;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -62,14 +67,24 @@ public class ControlActivity extends BaseActivity implements OutputAdapter.IClic
     private List<BeanOutput> mOutputs = new ArrayList<>();
     private OutputAdapter mOutputAdapter;
     private InputAdapter mInputAdapter;
-
+    private String mInput;
+    private int length = 4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_control);
         ButterKnife.bind(this);
-        initViews();
         mIp = getIntent().getStringExtra("ip");
+        mInput = getIntent().getStringExtra("input");
+        try {
+            JSONArray ja = new JSONArray(mInput);
+            if (ja.length() == 5){
+                length = 5;
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        initViews();
 
         mDBDevices = MainApplication.getDaoInstant().getDBDeviceDao().queryBuilder().where(DBDeviceDao.Properties.DeviceIp.eq(mIp)).list();
 
@@ -136,9 +151,11 @@ public class ControlActivity extends BaseActivity implements OutputAdapter.IClic
     protected void initViews() {
         mToolLeft.setImageResource(R.mipmap.icon_back);
         mToolTitle.setText(getString(R.string.control));
+        mToolTitle.setTextSize(18);
         mToolRight.setImageResource(R.mipmap.icon_set);
         mInputList.setVisibility(View.GONE);
-        mInputList.setLayoutManager(new GridLayoutManager(this,4));
+
+        mInputList.setLayoutManager(new GridLayoutManager(this,length));
 
         mInputShow.setImageResource(R.mipmap.icon_down);
 
